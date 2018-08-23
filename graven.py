@@ -164,6 +164,7 @@ if SAVE:
 	plt.savefig(SAVE)
 	with open(('{}.json'.format(SAVE)), 'w') as outfile:  
 		json.dump(data, outfile)
+	print("\n[+] Output saved to {}.json".format(SAVE))
 
 if PLOT:
 	plt.show()
