@@ -129,7 +129,7 @@ def dbrs(n, k=2):
 banner()
 parsein()
 
-payload = dbrs(LEN)
+payload = ("0"*LEN) + str(dbrs(LEN))
 DATA = [int(i) for i in str(payload)]
 
 
