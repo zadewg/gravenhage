@@ -103,7 +103,7 @@ class Modulation:
 def dbrs(n, k=2):
 	
 	"""
-	k: alphabet size
+	k: alphabet space 
 	n: subsequence size
 	"""
 
