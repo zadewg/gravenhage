@@ -13,9 +13,8 @@ def banner():
 	print(" \_, /_/  \_,_/|___/\__/_//_/_//_/\_,_/\_, /\__/   ")
 	print("/___/                                 /___/        ")
 
-	print("\n           Radio Frequency Hacking              ")
-
-	print("\n    https://github.com/zadewg/gravenhage  \n\n ")
+	print("\n           Radio Frequency Hacking               ")
+	print("\n    https://github.com/zadewg/gravenhage  \n\n   ")
 
 
 
