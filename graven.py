@@ -24,7 +24,7 @@ def parsein():
 
 	parser = argparse.ArgumentParser(description='https://github.com/zadewg/gravenhage')
 	parser.add_argument('-kl','--length', help='Register length', required=True)
-	parser.add_argument('-u','--use', help='Modulation technique to apply (ASK, FSK, PSK)', required=True)
+	parser.add_argument('-u','--use', help='Modulation technique to apply (ASK, FSK, PSK, PWM)', required=True)
 	parser.add_argument('-f','--freq', help='Carrier signal frequency', required=False)
 	parser.add_argument('-p','--plt', help='Signal plotting', action='store_true', required=False)
 	parser.add_argument('-of','--outf', help='File to write to', required=False)
@@ -83,6 +83,18 @@ class Modulation:
 			samples_per_bit = 2*Fs/bit_arr.size 
 			dd = np.repeat(bit_arr, samples_per_bit)
 			y = dd*np.sin(2 * np.pi * FREQ * t)
+		
+		'''
+		elif (MOD=='PWM'):
+			for k in DATA:
+				x = "*"
+				if(k == "0"):
+					x = "11100" #  A zero is encoded as a longer high pulse (high-high-low)
+				if(k == "1"):
+					x = "11000" # and a one is encoded as a shorter high pulse (high-low-low).
+				pwm_str_key = pwm_str_key + x
+			y = pwm_strt_key
+		'''
 
 		else:
 			print("Modulation technique not supported")
