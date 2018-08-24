@@ -159,8 +159,8 @@ data['encoded'] = y.tolist()
 outb = payload if len(payload) <= 57 else payload[0:57]
 outm = y if len(y) <= 80 else y[0:80]
 
-print("\nOriginal dictionary size: {}".format(2**LEN))
-print("Exploit payload size: {}".format(len(payload)))
+print("\nOriginal dictionary size: {}".format(LEN*(2**LEN)))
+print("Exploit payload size: {}".format(len(payload)+LEN))
 print("\nSequence head: {}\n".format(outb))
 print("{} Modulated head:\n {}\n".format(MOD, outm))
 
